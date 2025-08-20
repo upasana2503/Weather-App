@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="weather-app-container">
+        <div class="weather-app">
+            <header>
+                <h1>Weather Dashboard</h1>
+            </header>
+
+            <div class="search-section">
+                <input type="text" id="location-input" placeholder="Enter city or location">
+                <button id="search-button">Search</button>
+            </div>
+
+            <div class="controls-section">
+                <div class="select-wrap">
+                    <select id="viewSelect">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <button id="clear-history-button">Clear History</button>
+            </div>
+
+            <div class="history-section">
+                <h2>Search History</h2>
+                <ul id="history-list">
+                    <!-- History items will be loaded here -->
+                </ul>
+            </div>
+
+            <div class="weather-display-section">
+                <div id="loading-state" class="weather-view">
+                    <p>Loading weather data...</p>
+                </div>
+                <div id="empty-state" class="weather-view active">
+                    <p>Search for a city to get weather information.</p>
+                </div>
+                <div id="error-state" class="weather-view">
+                    <p>Error: City not found or data unavailable.</p>
+                </div>
+
+                <div id="current-weather" class="weather-view">
+                    <h2>Current Weather</h2>
+                    <p>Location: <span id="current-location"></span></p>
+                    <p>Temperature: <span id="current-temp"></span></p>
+                    <p>Conditions: <span id="current-conditions"></span></p>
+                    <p>Humidity: <span id="current-humidity"></span></p>
+                    <p>Wind Speed: <span id="current-wind"></span></p>
+                </div>
+
+                <div id="hourly-forecast" class="weather-view">
+                    <h2>Hourly Forecast</h2>
+                    <div class="forecast-container" id="hourly-container">
+                        <!-- Hourly forecast items will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="7day-forecast" class="weather-view">
+                    <h2>7-Day Forecast</h2>
+                    <div class="forecast-container" id="7day-container">
+                        <!-- 7-Day forecast items will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="15day-forecast" class="weather-view">
+                    <h2>15-Day Forecast</h2>
+                    <div class="forecast-container" id="15day-container">
+                        <!-- 15-Day forecast items will be loaded here -->
+                    </div>
+                </div>
+
+                <div id="monthly-overview" class="weather-view">
+                    <h2>Monthly Overview</h2>
+                    <div class="monthly-stats-container" id="monthly-stats-container">
+                        <!-- Aggregated monthly stats will be loaded here -->
+                    </div>
+                    <div class="forecast-container" id="monthly-daily-container">
+                        <!-- Daily data for the month will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Created by Upasana Kumari</p>
+            <div class="social-icons">
+                <a href="mailto:upasanasingh2503@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/upasana25/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/upasana2503" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/upasana226/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
